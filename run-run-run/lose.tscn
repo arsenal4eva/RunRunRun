@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c3vcm8poqr0is"]
+
+[ext_resource type="Script" uid="uid://dsdmnemk18nt4" path="res://lose.gd" id="1_46blr"]
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="1_pl8j0"]
+[ext_resource type="Texture2D" uid="uid://d2wky82ggqvfc" path="res://angrysans.png" id="2_46blr"]
+
+[node name="Lose" type="Node2D" unique_id=756434688]
+script = ExtResource("1_46blr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1071192454]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_pl8j0")
+expand_mode = 1
+
+[node name="sans" type="TextureRect" parent="." unique_id=139432643]
+offset_left = 442.0
+offset_top = 196.0
+offset_right = 682.0
+offset_bottom = 426.0
+texture = ExtResource("2_46blr")
+
+[node name="caught" type="RichTextLabel" parent="." unique_id=355256219]
+offset_left = 496.0
+offset_top = 147.0
+offset_right = 640.0
+offset_bottom = 175.0
+text = "Sans catches you."
+
+[node name="mad" type="RichTextLabel" parent="." unique_id=1347899726]
+offset_left = 526.0
+offset_top = 447.0
+offset_right = 670.0
+offset_bottom = 475.0
+text = "He is MAD"

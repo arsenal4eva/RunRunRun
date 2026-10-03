@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dqj0hw0b2gqeo"]
+
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="1_5v8ap"]
+[ext_resource type="Script" uid="uid://dnjwq3ge1hvs3" path="res://options.gd" id="1_se8ut"]
+
+[node name="Options" type="Node2D" unique_id=172301719]
+script = ExtResource("1_se8ut")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1369283655]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_5v8ap")
+expand_mode = 1
+
+[node name="Lose" type="RichTextLabel" parent="." unique_id=2015655228]
+offset_left = 463.0
+offset_top = 220.0
+offset_right = 717.0
+offset_bottom = 275.0
+theme_override_font_sizes/normal_font_size = 40
+text = "You lost ..."
+fit_content = true
+
+[node name="Win" type="RichTextLabel" parent="." unique_id=1331765617]
+offset_left = 441.0
+offset_top = 219.0
+offset_right = 695.0
+offset_bottom = 274.0
+theme_override_font_sizes/normal_font_size = 40
+text = "You escaped!"
+fit_content = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=929741387]
+offset_left = 434.0
+offset_top = 418.0
+offset_right = 688.0
+offset_bottom = 526.0
+
+[node name="Replay" type="Button" parent="VBoxContainer" unique_id=897261025]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Replay game"
+
+[node name="End" type="Button" parent="VBoxContainer" unique_id=974057093]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "End game"
+
+[connection signal="pressed" from="VBoxContainer/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="VBoxContainer/End" to="." method="_on_end_pressed"]

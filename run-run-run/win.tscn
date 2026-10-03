@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c5k3j1hx2bei5"]
+
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="1_hgi8f"]
+[ext_resource type="Script" uid="uid://conr5avvnbdav" path="res://win.gd" id="1_tmki8"]
+[ext_resource type="Texture2D" uid="uid://cmqsvsxxfnlg2" path="res://smilingsans.png" id="2_tmki8"]
+
+[node name="Win" type="Node2D" unique_id=2045104335]
+script = ExtResource("1_tmki8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=618392145]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_hgi8f")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=919457677]
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 892.0
+offset_bottom = 237.0
+theme_override_font_sizes/normal_font_size = 30
+text = "You escape Sans
+You decide to fix the screen and try again.
+This time, you manage to beat it.
+Sans smiles at you through the screen."
+
+[node name="Sans" type="TextureRect" parent="." unique_id=1481828873]
+offset_left = 367.0
+offset_top = 235.0
+offset_right = 713.0
+offset_bottom = 574.0
+texture = ExtResource("2_tmki8")
+expand_mode = 1

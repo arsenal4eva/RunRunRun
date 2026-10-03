@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://dmcdux3l1vyb2"]
+
+[ext_resource type="Script" uid="uid://b3w5o24dbin0i" path="res://minigame_1.gd" id="1_vlki2"]
+[ext_resource type="PackedScene" uid="uid://hxck3qp5gg2l" path="res://player.tscn" id="2_gi7k6"]
+[ext_resource type="Script" uid="uid://b8ks2xfsw0id0" path="res://soul_fragment.gd" id="3_s0dnv"]
+[ext_resource type="Script" uid="uid://28oxf80keft2" path="res://soul_fragment_2.gd" id="5_vlki2"]
+[ext_resource type="Texture2D" uid="uid://i4rkyf74uohf" path="res://key.png" id="6_261h4"]
+[ext_resource type="Script" uid="uid://dg8csrxl6bdwn" path="res://soul_fragment_3.gd" id="6_ighjx"]
+[ext_resource type="Script" uid="uid://c88qmoksribd0" path="res://soul_fragment_4.gd" id="7_261h4"]
+[ext_resource type="Script" uid="uid://dny0obse1k2kn" path="res://soul_fragment_5.gd" id="8_5v7aa"]
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="10_261h4"]
+[ext_resource type="PackedScene" uid="uid://bohinao0wla2e" path="res://themed_timer.tscn" id="10_ighjx"]
+[ext_resource type="Script" uid="uid://cldvqyv6a1yh0" path="res://moving_platform.gd" id="11_move"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdn2g"]
+size = Vector2(1151.5, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ddxe"]
+size = Vector2(200, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jh2im"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikmfb"]
+size = Vector2(140, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tk5qp"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yskh"]
+size = Vector2(87.005684, 10.95499)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0qx3"]
+size = Vector2(100, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mmn6"]
+size = Vector2(137.34654, 8.952364)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tdn2g"]
+radius = 25.0
+
+[node name="Minigame_1" type="Node2D" unique_id=1998901585]
+script = ExtResource("1_vlki2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=441269984]
+offset_right = 1153.0
+offset_bottom = 650.0
+texture = ExtResource("10_261h4")
+expand_mode = 1
+
+[node name="Player" parent="." unique_id=1457617375 instance=ExtResource("2_gi7k6")]
+position = Vector2(90, 533)
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1556109259]
+position = Vector2(1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1871252063]
+offset_top = 596.0
+offset_right = 1152.0
+offset_bottom = 647.0
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1175052502]
+position = Vector2(576.25, 621.75)
+shape = SubResource("RectangleShape2D_tdn2g")
+
+[node name="Platform2" type="AnimatableBody2D" parent="." unique_id=1592471649]
+script = ExtResource("11_move")
+distance = 90.0
+speed = 0.8
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=2071380530]
+offset_left = 600.0
+offset_top = 496.0
+offset_right = 800.0
+offset_bottom = 520.0
+color = Color(1, 0.627451, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1706302380]
+position = Vector2(700, 508)
+shape = SubResource("RectangleShape2D_2ddxe")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=617608758]
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=21630997]
+offset_left = 960.0
+offset_top = 380.0
+offset_right = 1000.0
+offset_bottom = 420.0
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=654306588]
+position = Vector2(980, 400)
+shape = SubResource("RectangleShape2D_jh2im")
+
+[node name="Platform4" type="AnimatableBody2D" parent="." unique_id=1085472186]
+script = ExtResource("11_move")
+axis = "y"
+distance = 60.0
+speed = 0.9
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=626158969]
+offset_left = 230.0
+offset_top = 341.0
+offset_right = 370.0
+offset_bottom = 359.0
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=959992195]
+position = Vector2(300, 350)
+shape = SubResource("RectangleShape2D_ikmfb")
+
+[node name="Platform5" type="StaticBody2D" parent="." unique_id=935818502]
+
+[node name="ColorRect" type="ColorRect" parent="Platform5" unique_id=1202733839]
+offset_left = 520.0
+offset_top = 554.0
+offset_right = 560.0
+offset_bottom = 594.0
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=236301018]
+position = Vector2(540, 574)
+shape = SubResource("RectangleShape2D_tk5qp")
+
+[node name="Platform6" type="StaticBody2D" parent="." unique_id=1575366669]
+
+[node name="ColorRect" type="ColorRect" parent="Platform6" unique_id=1705138588]
+offset_left = 896.0
+offset_top = 416.0
+offset_right = 907.0
+offset_bottom = 503.0
+pivot_offset = Vector2(5.5, 43.5)
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6" unique_id=168679753]
+position = Vector2(901.5, 459.49997)
+rotation = 1.5702783
+shape = SubResource("RectangleShape2D_2yskh")
+
+[node name="Platform7" type="StaticBody2D" parent="." unique_id=1960088326]
+
+[node name="ColorRect" type="ColorRect" parent="Platform7" unique_id=1924562582]
+offset_left = 100.0
+offset_top = 246.0
+offset_right = 200.0
+offset_bottom = 252.0
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7" unique_id=2016033030]
+position = Vector2(150, 249)
+shape = SubResource("RectangleShape2D_c0qx3")
+
+[node name="Platform8" type="StaticBody2D" parent="." unique_id=2007149510]
+
+[node name="ColorRect" type="ColorRect" parent="Platform8" unique_id=1184621653]
+offset_left = 415.99994
+offset_top = 385.0
+offset_right = 554.0
+offset_bottom = 394.0
+rotation = 0.45178896
+pivot_offset = Vector2(69, 4.5)
+color = Color(1, 0.6666667, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8" unique_id=236805956]
+position = Vector2(484.93573, 389.53766)
+rotation = 0.451789
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_1mmn6")
+
+[node name="SoulFragment" type="Node2D" parent="." unique_id=191052140]
+script = ExtResource("3_s0dnv")
+
+[node name="SoulFragment" type="TextureRect" parent="SoulFragment" unique_id=1058365701]
+offset_left = 524.0
+offset_top = 499.0
+offset_right = 555.0
+offset_bottom = 547.0
+texture = ExtResource("6_261h4")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="SoulFragment" unique_id=225115386]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoulFragment/Area2D" unique_id=1816055316]
+position = Vector2(539, 522)
+shape = SubResource("CircleShape2D_tdn2g")
+
+[node name="SoulFragment2" type="Node2D" parent="." unique_id=1988664328]
+position = Vector2(25, 1)
+script = ExtResource("5_vlki2")
+
+[node name="SoulFragment" type="TextureRect" parent="SoulFragment2" unique_id=963919559]
+offset_left = 964.0
+offset_top = 334.0
+offset_right = 996.0
+offset_bottom = 373.0
+texture = ExtResource("6_261h4")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="SoulFragment2" unique_id=55357963]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoulFragment2/Area2D" unique_id=1375859926]
+position = Vector2(980, 352)
+shape = SubResource("CircleShape2D_tdn2g")
+
+[node name="SoulFragment3" type="Node2D" parent="." unique_id=345932940]
+script = ExtResource("6_ighjx")
+
+[node name="SoulFragment" type="TextureRect" parent="SoulFragment3" unique_id=1090178134]
+offset_left = 684.0
+offset_top = 442.0
+offset_right = 716.0
+offset_bottom = 481.0
+texture = ExtResource("6_261h4")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="SoulFragment3" unique_id=801799077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoulFragment3/Area2D" unique_id=1526191691]
+position = Vector2(700, 460)
+shape = SubResource("CircleShape2D_tdn2g")
+
+[node name="SoulFragment4" type="Node2D" parent="." unique_id=37124570]
+script = ExtResource("7_261h4")
+
+[node name="SoulFragment" type="TextureRect" parent="SoulFragment4" unique_id=1614141766]
+offset_left = 924.0
+offset_top = 436.0
+offset_right = 956.0
+offset_bottom = 480.0
+texture = ExtResource("6_261h4")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="SoulFragment4" unique_id=1074214958]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoulFragment4/Area2D" unique_id=177794911]
+position = Vector2(940, 457)
+shape = SubResource("CircleShape2D_tdn2g")
+
+[node name="SoulFragment5" type="Node2D" parent="." unique_id=847620880]
+script = ExtResource("8_5v7aa")
+
+[node name="SoulFragment" type="TextureRect" parent="SoulFragment5" unique_id=1221323957]
+offset_left = 134.0
+offset_top = 187.0
+offset_right = 166.0
+offset_bottom = 233.0
+texture = ExtResource("6_261h4")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="SoulFragment5" unique_id=2112548803]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoulFragment5/Area2D" unique_id=238010080]
+position = Vector2(150, 209)
+shape = SubResource("CircleShape2D_tdn2g")
+
+[node name="ThemedTimer" parent="." unique_id=509133502 instance=ExtResource("10_ighjx")]
+
+[node name="Timer3" type="RichTextLabel" parent="ThemedTimer" unique_id=197243764]
+offset_left = 32.0
+offset_top = 17.0
+offset_right = 200.0
+offset_bottom = 53.0
+theme_override_font_sizes/normal_font_size = 30

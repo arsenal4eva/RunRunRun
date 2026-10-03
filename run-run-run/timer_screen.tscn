@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bcnio641u5tni"]
+
+[ext_resource type="Script" uid="uid://bfa5gmgshon8p" path="res://timer_screen.gd" id="1_k5vih"]
+[ext_resource type="Texture2D" uid="uid://dvbx4rb8c142p" path="res://heart.png" id="2_mjy2p"]
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="2_ue55m"]
+
+[node name="TimerScreen" type="Node2D" unique_id=1174518303]
+script = ExtResource("1_k5vih")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1291979194]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_ue55m")
+expand_mode = 1
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1334420576]
+offset_left = 533.0
+offset_top = 374.0
+offset_right = 605.0
+offset_bottom = 436.0
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+
+[node name="SoulContainer" type="HBoxContainer" parent="." unique_id=1496239371]
+offset_left = 201.0
+offset_top = 112.0
+offset_right = 1073.0
+offset_bottom = 240.0
+
+[node name="Soul" type="TextureRect" parent="SoulContainer" unique_id=1711734003]
+layout_mode = 2
+texture = ExtResource("2_mjy2p")
+expand_mode = 3
+
+[node name="Soul2" type="TextureRect" parent="SoulContainer" unique_id=1094943775]
+layout_mode = 2
+texture = ExtResource("2_mjy2p")
+expand_mode = 3
+
+[node name="Soul3" type="TextureRect" parent="SoulContainer" unique_id=1089318629]
+layout_mode = 2
+texture = ExtResource("2_mjy2p")
+expand_mode = 3
+
+[node name="Soul4" type="TextureRect" parent="SoulContainer" unique_id=1363490593]
+layout_mode = 2
+texture = ExtResource("2_mjy2p")
+expand_mode = 3
+
+[node name="Soul5" type="TextureRect" parent="SoulContainer" unique_id=704926795]
+layout_mode = 2
+texture = ExtResource("2_mjy2p")
+expand_mode = 3
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=753534887]
+offset_left = 497.0
+offset_top = 318.0
+offset_right = 657.0
+offset_bottom = 377.0
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"

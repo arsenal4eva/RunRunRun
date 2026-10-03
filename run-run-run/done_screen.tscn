@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bpf3sr3blwdap"]
+
+[ext_resource type="Script" path="res://done_screen.gd" id="1_done"]
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="1_mioa6"]
+
+[node name="done_screen" type="Node2D" unique_id=7901067]
+script = ExtResource("1_done")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1685193442]
+offset_top = -2.0
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_mioa6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1575482068]
+offset_left = 335.0
+offset_top = 224.0
+offset_right = 808.0
+offset_bottom = 364.0
+theme_override_font_sizes/normal_font_size = 40
+text = "      Thanks for playing!
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1692824989]
+offset_left = 496.0
+offset_top = 397.0
+offset_right = 679.0
+offset_bottom = 422.0
+text = "Game by arsenal4eva"
+
+[node name="Replay" type="Button" parent="." unique_id=2801459013]
+offset_left = 456.0
+offset_top = 460.0
+offset_right = 576.0
+offset_bottom = 500.0
+text = "Replay"
+
+[node name="Quit" type="Button" parent="." unique_id=2801459014]
+offset_left = 596.0
+offset_top = 460.0
+offset_right = 716.0
+offset_bottom = 500.0
+text = "Quit"
+
+[connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

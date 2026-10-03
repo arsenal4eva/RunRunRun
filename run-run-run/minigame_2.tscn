@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dfjrgsd0pgb0s"]
+
+[ext_resource type="Script" uid="uid://dxb6boqdd603u" path="res://minigame_2.gd" id="1_5x31c"]
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="2_3qiw4"]
+[ext_resource type="PackedScene" uid="uid://bohinao0wla2e" path="res://themed_timer.tscn" id="2_vdqgs"]
+[ext_resource type="Script" uid="uid://b8hfnra48hkg4" path="res://soul_button.gd" id="3_3qiw4"]
+[ext_resource type="Texture2D" uid="uid://cmqsvsxxfnlg2" path="res://smilingsans.png" id="3_gc66t"]
+
+[node name="Minigame_2" type="Node2D" unique_id=37006638]
+script = ExtResource("1_5x31c")
+
+[node name="Background" type="TextureRect" parent="." unique_id=418627239]
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("2_3qiw4")
+expand_mode = 1
+
+[node name="SoulButton_1" type="TextureButton" parent="." unique_id=1227745261]
+offset_left = 416.0
+offset_top = 287.0
+offset_right = 466.0
+offset_bottom = 336.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="SoulButton_2" type="TextureButton" parent="." unique_id=363608648]
+offset_left = 1066.0
+offset_top = 271.0
+offset_right = 1116.0
+offset_bottom = 320.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="SoulButton_3" type="TextureButton" parent="." unique_id=1860505145]
+offset_left = 127.0
+offset_top = 90.0
+offset_right = 177.0
+offset_bottom = 139.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="SoulButton_4" type="TextureButton" parent="." unique_id=290996083]
+offset_left = 401.0
+offset_top = 574.0
+offset_right = 451.0
+offset_bottom = 623.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="SoulButton_5" type="TextureButton" parent="." unique_id=1485181018]
+offset_left = 770.0
+offset_top = 411.0
+offset_right = 820.0
+offset_bottom = 460.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="SoulButton_6" type="TextureButton" parent="." unique_id=811091032]
+offset_left = 75.0
+offset_top = 472.0
+offset_right = 125.0
+offset_bottom = 521.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="SoulButton_7" type="TextureButton" parent="." unique_id=1802059463]
+offset_left = 697.0
+offset_top = 69.0
+offset_right = 747.0
+offset_bottom = 118.0
+texture_normal = ExtResource("3_gc66t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="ThemedTimer" parent="." unique_id=509133502 instance=ExtResource("2_vdqgs")]
+
+[node name="Timer3" type="RichTextLabel" parent="ThemedTimer" unique_id=218829003]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="SoulButton_1" to="SoulButton_1" method="_on_pressed"]
+[connection signal="pressed" from="SoulButton_2" to="SoulButton_2" method="_on_pressed"]
+[connection signal="pressed" from="SoulButton_3" to="SoulButton_3" method="_on_pressed"]
+[connection signal="pressed" from="SoulButton_4" to="SoulButton_4" method="_on_pressed"]
+[connection signal="pressed" from="SoulButton_5" to="SoulButton_5" method="_on_pressed"]
+[connection signal="pressed" from="SoulButton_6" to="SoulButton_6" method="_on_pressed"]
+[connection signal="pressed" from="SoulButton_7" to="SoulButton_7" method="_on_pressed"]

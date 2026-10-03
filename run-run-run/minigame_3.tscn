@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c5bcp4y8xya31"]
+
+[ext_resource type="Script" uid="uid://d1ymej05tfewy" path="res://minigame_3.gd" id="1_cdg48"]
+[ext_resource type="Texture2D" uid="uid://u17fx3y6tl4d" path="res://battle.png" id="2_cdg48"]
+[ext_resource type="PackedScene" uid="uid://battlesoul3k1" path="res://battle_soul.tscn" id="3_1i1uu"]
+[ext_resource type="Texture2D" uid="uid://dcelelc73ffys" path="res://glitch.png" id="5_cdg48"]
+[ext_resource type="PackedScene" uid="uid://bohinao0wla2e" path="res://themed_timer.tscn" id="6_1i1uu"]
+
+[node name="Minigame_3" type="Node2D" unique_id=1897858824]
+script = ExtResource("1_cdg48")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1993515789]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_cdg48")
+expand_mode = 1
+
+[node name="BattleBox" type="Node2D" parent="." unique_id=2051102334]
+
+[node name="Top" type="ColorRect" parent="BattleBox" unique_id=960961738]
+offset_left = 392.0
+offset_top = 171.0
+offset_right = 760.0
+offset_bottom = 176.0
+color = Color(0, 0, 0, 1)
+
+[node name="Bottom" type="ColorRect" parent="BattleBox" unique_id=2019650549]
+offset_left = 392.0
+offset_top = 432.0
+offset_right = 760.0
+offset_bottom = 437.0
+color = Color(0, 0, 0, 1)
+
+[node name="Left" type="ColorRect" parent="BattleBox" unique_id=960961739]
+offset_left = 387.0
+offset_top = 171.0
+offset_right = 392.0
+offset_bottom = 437.0
+color = Color(0, 0, 0, 1)
+
+[node name="Right" type="ColorRect" parent="BattleBox" unique_id=2019650550]
+offset_left = 760.0
+offset_top = 171.0
+offset_right = 765.0
+offset_bottom = 437.0
+color = Color(0, 0, 0, 1)
+
+[node name="Soul" parent="." unique_id=1457617375 instance=ExtResource("3_1i1uu")]
+position = Vector2(576, 304)
+
+[node name="ThemedTimer" parent="." unique_id=509133502 instance=ExtResource("6_1i1uu")]
+position = Vector2(576, 304)
+scale = Vector2(2.1999989, 1.6800005)
+
+[node name="Glitch" type="TextureRect" parent="." unique_id=825321419]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = ExtResource("5_cdg48")

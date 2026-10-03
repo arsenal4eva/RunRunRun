@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://o72v2ko04nkb"]
+
+[ext_resource type="Script" uid="uid://c72jpapxoevfj" path="res://title_screen.gd" id="1_05l2w"]
+[ext_resource type="Texture2D" uid="uid://d2wky82ggqvfc" path="res://angrysans.png" id="2_05l2w"]
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="2_ig5kc"]
+[ext_resource type="Texture2D" uid="uid://cmqsvsxxfnlg2" path="res://smilingsans.png" id="3_hafda"]
+
+[node name="TitleScreen" type="Node2D" unique_id=513700432]
+script = ExtResource("1_05l2w")
+
+[node name="Background" type="TextureRect" parent="." unique_id=548820990]
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 1154.0
+offset_bottom = 652.0
+texture = ExtResource("2_ig5kc")
+expand_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=281542642]
+offset_left = 426.0
+offset_top = 60.0
+offset_right = 896.0
+offset_bottom = 129.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 50
+text = "Run Run Run!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1198680235]
+offset_left = 485.0
+offset_top = 262.0
+offset_right = 680.0
+offset_bottom = 363.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=236149577]
+layout_mode = 2
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=401179504]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1903533017]
+layout_mode = 2
+text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1057540271]
+offset_left = 136.99997
+offset_top = 355.0
+offset_right = 376.99997
+offset_bottom = 585.0
+rotation = 0.78847295
+texture = ExtResource("2_05l2w")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2071772907]
+offset_left = 852.99994
+offset_top = 540.0
+offset_right = 1085.872
+offset_bottom = 777.0
+rotation = -0.9220638
+texture = ExtResource("3_hafda")
+expand_mode = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://b06juu6bk4xic"]
+
+[ext_resource type="Texture2D" uid="uid://cjcedg8cnl84r" path="res://background.png" id="1_ex3hv"]
+[ext_resource type="Script" uid="uid://3tgwjxg3m3iq" path="res://prologue.gd" id="1_prologue"]
+
+[node name="Prologue" type="Node2D" unique_id=673956050]
+script = ExtResource("1_prologue")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1686251903]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ex3hv")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=520682499]
+offset_left = 101.0
+offset_top = 105.0
+offset_right = 1062.0
+offset_bottom = 469.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=713221259]
+layout_mode = 2
+text = "                                                                                      You are a Undertale addict."
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer" unique_id=1618001239]
+layout_mode = 2
+text = "                                                                               Recently, you lost to the boss again."
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer" unique_id=648092750]
+layout_mode = 2
+text = "                                               Having tried for months to beat the game, you smash the screen in rage."
+fit_content = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer" unique_id=1073622721]
+layout_mode = 2
+text = "                                                                                        You feel something weird.                                                     "
+fit_content = true
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer" unique_id=66508606]
+layout_mode = 2
+text = "                                                                                                A rush of wind?                                               "
+fit_content = true
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="VBoxContainer" unique_id=70321686]
+layout_mode = 2
+text = "                                                                                       Then everything goes dark.                            "
+fit_content = true
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="VBoxContainer" unique_id=1980477313]
+layout_mode = 2
+text = "                                                                               You look up and see a cracked sky.                            "
+fit_content = true
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="VBoxContainer" unique_id=415905729]
+layout_mode = 2
+text = "                                                                           Only when you see Sans do you realize...                      "
+fit_content = true
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="VBoxContainer" unique_id=834563709]
+layout_mode = 2
+text = "                                                                                             You are in the game.                   "
+fit_content = true
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="VBoxContainer" unique_id=2136443531]
+layout_mode = 2
+text = "                                                                                              Sans is mad at you.                  "
+fit_content = true
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="VBoxContainer" unique_id=1385682510]
+layout_mode = 2
+text = "                                                                               You smashed the screen and broke it.                  "
+fit_content = true
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="VBoxContainer" unique_id=1868867061]
+layout_mode = 2
+text = "                                                                                              Now he is after you.              "
+fit_content = true
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="VBoxContainer" unique_id=1009291570]
+layout_mode = 2
+text = "                                                                     Escape the game, or you will be trapped forever.             "
+fit_content = true
